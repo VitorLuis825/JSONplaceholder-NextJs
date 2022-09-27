@@ -1,13 +1,13 @@
-import Link from 'next/link'
 import styles from './RightSideLink.module.css'
+import BLink from '../BLink/'
 
 const RightSideLink = ({text})=>{
     return(
-        <Link href={`/${text}`} passHref>
-            <a className={styles.link}>
+        <BLink href={`/${text}`}>
+            <div className={styles.link}>
                 <span className={styles.span}>{text}</span>
-            </a>
-        </Link>
+            </div>
+        </BLink>
     )
 }
 
