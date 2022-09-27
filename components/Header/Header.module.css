@@ -1,0 +1,20 @@
+.header{
+  background-color: #a2fcde;
+    padding: 1em 2em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    width: 100%;
+    color: white;
+
+  }
+  .right_side{
+    display: flex;
+    width: 40%;
+    justify-content: space-between;
+  }
+  .h1{
+    font-family: cursive;
+    text-decoration: underline;
+  }

@@ -1,0 +1,12 @@
+.link{
+    border: white 1px solid;
+    padding: 0.25em 1em; 
+    font-size: 1.1em;
+    background-color: #97fad9;
+}
+.link:hover{
+    background-color: aquamarine;
+}
+.span{
+    pointer-events: none;  
+  }
