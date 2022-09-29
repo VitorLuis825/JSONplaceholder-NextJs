@@ -2,10 +2,10 @@
 
 import Link from 'next/link'
 
-const BLink = ({href,children})=>{
+const BLink = ({href,children,className})=>{
     return(
         <Link href={href} passHref>
-            <a>
+            <a className={className}>
                 {children}
             </a>
         </Link>

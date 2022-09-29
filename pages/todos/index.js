@@ -1,14 +1,13 @@
-const comments = ({comments})=>{
+const todos = ({todos})=>{
     return(
         <main>
-            {comments.map(({postId,id,name,email,body})=>{
+            {todos.map(({userId,id,title,completed})=>{
                 return( 
                     <div key={id}>
-                        <div>{postId}</div>
+                        <div>{userId}</div>
                         <div>{id}</div>
-                        <div>{name}</div>
-                        <div>{email}</div>
-                        <div>{body}</div>
+                        <div>{title}</div>
+                        <div>{completed}</div>
                         <hr></hr>
                     </div>
                 )
@@ -16,16 +15,15 @@ const comments = ({comments})=>{
         </main>
     )
 }
-
 // Não uso getServerSideProps pq n preciso roda-lo na hora da requisição e sim no build time
 export async function getStaticProps(){
-    const res = await fetch("https://jsonplaceholder.typicode.com/comments")
+    const res = await fetch("https://jsonplaceholder.typicode.com/todos")
     const result = await res.json()
     return {
         props:{
-            comments : result
+            todos : result
         }
     }
 }
 
-export default comments
+export default todos

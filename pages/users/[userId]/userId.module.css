@@ -1,0 +1,42 @@
+.main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.container{
+    display: flex;
+    width: 80%;
+    height: 70%;
+    padding: 1em 2em;
+    border: 1px solid black;
+}
+.left{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    margin-right: 1.25em;
+}
+.right{
+    flex-grow: 1;
+}
+.upper_right{
+
+}
+.lower_right{
+
+}
+.name{
+    position: relative;
+    font-size: 1.75em;
+    font-weight: 600;
+}
+.name::after{
+    content: "";
+    position: absolute;
+    width: 200%;
+    height: 2px;
+    background-color: black;
+    bottom: 1px;
+    left: -50%;
+}

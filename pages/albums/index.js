@@ -1,11 +1,13 @@
-const posts = ({posts})=>{
+const albums = ({albums})=>{
     return(
         <main>
-            {posts.map(({title,body,userId,id})=>{
+            {albums.map(({userId,id,title})=>{
                 return( 
                     <div key={id}>
-                        <h2>{title}</h2>
-                        <p>{body}</p>
+                        <div>{userId}</div>
+                        <div>{id}</div>
+                        <div>{title}</div>
+                        <hr></hr>
                     </div>
                 )
             })}
@@ -14,13 +16,13 @@ const posts = ({posts})=>{
 }
 // Não uso getServerSideProps pq n preciso roda-lo na hora da requisição e sim no build time
 export async function getStaticProps(){
-    const res = await fetch("https://jsonplaceholder.typicode.com/posts")
+    const res = await fetch("https://jsonplaceholder.typicode.com/albums")
     const result = await res.json()
     return {
         props:{
-            posts : result
+            albums : result
         }
     }
 }
 
-export default posts
+export default albums
